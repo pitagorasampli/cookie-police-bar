@@ -1,0 +1,18 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _helpers = require("./helpers");
+
+var _constants = require("./constants");
+
+var _templateObject;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var _default = (0, _helpers.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", ",\n  ", " * {\n    box-sizing: border-box;\n  }\n\n  ", " .", ".wrapper {\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,\n      'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',\n      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';\n    font-size: 1rem;\n    font-weight: 400;\n    line-height: 1.5;\n    display: flex;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n    -webkit-box-align: center;\n    align-items: center;\n    width: 100%;\n    padding: 2rem;\n    background-color: rgb(250, 250, 250);\n    left: 0px;\n    bottom: 0px;\n    box-shadow: rgb(0 0 0 / 20%) 0px -2px 4px;\n    color: rgb(142, 146, 148);\n    position: fixed;\n    height: 12.5rem;\n    z-index: 20;\n    animation: 3s linear 0s 1 normal both running imganim;\n  }\n\n  ", " .", ".text-wrapper {\n    margin-right: 0.625rem;\n  }\n\n  ", " .", ".text-wrapper > h3 {\n    display: block;\n    font-size: 1.17em;\n    margin-block-start: 1em;\n    margin-block-end: 1em;\n    margin-inline-start: 0px;\n    margin-inline-end: 0px;\n    font-weight: bold;\n    margin-top: 0px;\n    margin-bottom: 0.5rem;\n  }\n  ", " .", ".text-wrapper > p {\n    margin-top: 0px;\n    margin-bottom: 1rem;\n  }\n  ", " .", ".text-wrapper > p > a {\n    text-decoration: none;\n    background-color: transparent;\n    color: rgb(1, 182, 208);\n  }\n  ", " .", ".text-wrapper > p > a:hover {\n    text-decoration: underline;\n  }\n  ", " .", ".accept-button {\n    cursor: pointer;\n    width: 30%;\n    align-self: center;\n    margin-right: 3.25rem;\n    margin-top: 0.5rem;\n    margin-bottom: 0.0625rem;\n    -webkit-box-align: center;\n    align-items: center;\n    color: white;\n    font-size: 1.125rem;\n    font-weight: bold;\n    line-height: 1.5;\n    background: rgb(255, 184, 0);\n    border: 0.046875rem solid rgb(255, 184, 0);\n    border-radius: 1.25rem;\n    padding: 0.5rem;\n    cursor: pointer;\n    text-decoration: none !important;\n  }\n  ", " .", ".close-button {\n    cursor: pointer;\n    background: transparent;\n    border: 0.0625rem solid transparent;\n    border-radius: 3rem;\n    color: rgb(142, 146, 148);\n    display: inline-block;\n    font-weight: bold;\n    line-height: 1.5;\n    outline: 0px;\n    font-size: 1.7rem;\n    padding: 0px 0.5rem;\n    margin-right: -0.5rem;\n    margin-top: -0.25rem;\n    margin-bottom: 6.25rem;\n    text-align: center !important;\n    text-transform: none;\n  }\n  ", " .", ".close-button > svg {\n    height: auto;\n    width: 1.7rem;\n  }\n"])), _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName, _constants.tagName);
+
+exports.default = _default;
