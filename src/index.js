@@ -105,6 +105,9 @@ function createMainWrapper(attributes = {}, children = []) {
         backgroundColor: attributes.bgColor,
         color: attributes.textColor,
       },
+      attributes: {
+        class: `${tagName} wrapper`,
+      },
     },
     children
   );
