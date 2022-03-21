@@ -30,10 +30,10 @@ function createLink(attributes = {}) {
         rel: 'noreferrer',
       },
       styles: {
-        color: attributes.linkColor,
+        color: attributes.linkcolor,
       },
     },
-    [attributes.linkText || texts.link]
+    [attributes.linktext || texts.link]
   );
 }
 
@@ -61,9 +61,9 @@ function createAcceptButton(attributes = {}, events = {}) {
         class: `${tagName} accept-button`,
       },
       styles: {
-        backgroundColor: attributes.btnBgColor,
-        borderColor: attributes.btnBgColor,
-        color: attributes.btnTextColor,
+        backgroundColor: attributes.btnbgcolor,
+        borderColor: attributes.btnbgcolor,
+        color: attributes.btntextcolor,
       },
       events: {
         click: (e) => {
@@ -72,7 +72,7 @@ function createAcceptButton(attributes = {}, events = {}) {
         },
       },
     },
-    [attributes.btnText || texts.acceptButton]
+    [attributes.btntext || texts.acceptButton]
   );
 }
 
@@ -84,7 +84,7 @@ function createCloseButton(attributes = {}, events = {}) {
         class: `${tagName} close-button`,
       },
       styles: {
-        color: attributes.closeColor,
+        color: attributes.closecolor,
       },
       events: {
         click: (e) => {
@@ -102,8 +102,8 @@ function createMainWrapper(attributes = {}, children = []) {
     'div',
     {
       styles: {
-        backgroundColor: attributes.bgColor,
-        color: attributes.textColor,
+        backgroundColor: attributes.closecolor,
+        color: attributes.textcolor,
       },
       attributes: {
         class: `${tagName} wrapper`,

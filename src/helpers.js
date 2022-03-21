@@ -69,7 +69,7 @@ export function getAttributes(el) {
   const attributes = {};
   if (el.hasAttributes()) {
     const elAttributes = Array.from(el.attributes);
-    elAttributes.each((attr) => {
+    elAttributes.forEach((attr) => {
       attributes[attr.name] = attr.value;
     });
   }
