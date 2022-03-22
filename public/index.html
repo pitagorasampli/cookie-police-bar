@@ -10,23 +10,22 @@
     <title>Cookie Police Bar</title>
   </head>
   <body>
-    <noscript>
-      <div
-        style="
-          background: #ec1c40;
-          color: white;
-          padding: 8px;
-          text-align: center;
-        "
-      >
-        Você precisa habilitar o JavaScript para acessar este site.
-      </div>
-    </noscript>
-
     <div id="root">
-      <cookie-police-bar />
+      <cookie-police-bar
+         bgcolor="black"
+         textcolor="white"
+         title="Site com cookies"
+         text="Este site usa cookies para personalizar..."
+         linkcolor="orange"
+         linktext="Portal"
+         link="https://ampli.com.br"
+         btnbgcolor="blue"
+         btntextcolor="gray"
+         btntext="Certo"
+         closecolor="red"
+         />
     </div>
 
-    <script type="text/javascript" src="../dist/index.js"></script>
+    <script type="text/javascript" src="/dist/index.js"></script>
   </body>
 </html>

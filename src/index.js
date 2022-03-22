@@ -13,8 +13,7 @@ import {
   getAttributes,
   createElement,
 } from './helpers';
-import globalStyles from './styles';
-import svgClose from './svg-close';
+import globalStyles, { svgCloseButton } from './styles';
 
 function createTitle(attributes = {}) {
   return createElement('h3', {}, [attributes.title || texts.title]);
@@ -39,6 +38,18 @@ function createLink(attributes = {}) {
 
 function createText(attributes = {}, children = []) {
   return createElement('p', {}, [attributes.text || texts.text, ...children]);
+}
+
+function createTitleWrapper(children = []) {
+  return createElement(
+    'div',
+    {
+      attributes: {
+        class: `${tagName} title-wrapper`,
+      },
+    },
+    children
+  );
 }
 
 function createTextWrapper(children = []) {
@@ -67,7 +78,7 @@ function createAcceptButton(attributes = {}, events = {}) {
       },
       events: {
         click: (e) => {
-          localStorage.setItem(isPoliceAccepted, 'true');
+          localStorage.setItem(isPoliceAccepted, 1);
           events.click && events.click(e);
         },
       },
@@ -77,24 +88,22 @@ function createAcceptButton(attributes = {}, events = {}) {
 }
 
 function createCloseButton(attributes = {}, events = {}) {
-  return createElement(
-    'button',
-    {
-      attributes: {
-        class: `${tagName} close-button`,
-      },
-      styles: {
-        color: attributes.closecolor,
-      },
-      events: {
-        click: (e) => {
-          sessionStorage.setItem(isPoliceBarClosed, 'true');
-          events.click && events.click(e);
-        },
+  return createElement('button', {
+    attributes: {
+      class: `${tagName} close-button`,
+      'aria-label': 'Fechar',
+    },
+    styles: {
+      backgroundImage:
+        attributes.closecolor && svgCloseButton(attributes.closecolor),
+    },
+    events: {
+      click: (e) => {
+        sessionStorage.setItem(isPoliceBarClosed, 1);
+        events.click && events.click(e);
       },
     },
-    [svgClose]
-  );
+  });
 }
 
 function createMainWrapper(attributes = {}, children = []) {
@@ -102,7 +111,7 @@ function createMainWrapper(attributes = {}, children = []) {
     'div',
     {
       styles: {
-        backgroundColor: attributes.closecolor,
+        backgroundColor: attributes.bgcolor,
         color: attributes.textcolor,
       },
       attributes: {
@@ -122,12 +131,14 @@ function load() {
 
   mainElement.appendChild(
     createMainWrapper(attributes, [
-      createTextWrapper([
+      createTitleWrapper([
         createTitle(attributes),
-        createText(attributes, [createLink(attributes)]),
+        createCloseButton(attributes, { click: removeMainElement }),
       ]),
-      createAcceptButton(attributes, { click: removeMainElement }),
-      createCloseButton(attributes, { click: removeMainElement }),
+      createTextWrapper([
+        createText(attributes, [' ', createLink(attributes)]),
+        createAcceptButton(attributes, { click: removeMainElement }),
+      ]),
     ])
   );
 }

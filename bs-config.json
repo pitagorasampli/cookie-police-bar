@@ -1,5 +1,5 @@
 {
   "port": 8000,
-  "files": ["./src/**/*.js"],
+  "files": ["./dist/**/*.js", "./public/index.html"],
   "server": { "baseDir": "public",  "routes" : { "/dist" : "./dist"} }
 }

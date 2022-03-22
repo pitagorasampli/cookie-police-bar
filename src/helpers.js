@@ -23,10 +23,12 @@ export function createElement(
     element.setAttribute(attr, attributes[attr]);
   }
   for (let event in events) {
-    element.addEventListener(event, events[event]);
+    addEvent(event, events[event], element);
   }
   for (let style in styles) {
-    element.style[style] = styles[style];
+    if (styles[style]) {
+      element.style[style] = styles[style];
+    }
   }
   for (let child of children) {
     if (typeof child === 'string') {
@@ -62,7 +64,9 @@ export function isHidden() {
 }
 
 export function addEvent(event, callback, element = document, options = false) {
-  element.addEventListener(event, callback, options);
+  if (typeof callback === 'function') {
+    element.addEventListener(event, callback, options);
+  }
 }
 
 export function getAttributes(el) {

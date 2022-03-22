@@ -1,22 +1,15 @@
 const path = require('path');
-const webpack = require('webpack');
+
+const srcPath = path.resolve(__dirname, 'src');
 
 module.exports = {
-  devServer: {
-    static: path.join(__dirname, 'public'),
-    hot: true,
-    port: 3340,
-  },
-  entry: path.resolve(__dirname, 'src', 'index.js'),
-  mode: 'development',
+  entry: path.join(srcPath, 'index.js'),
+  mode: 'production',
   module: {
     rules: [
       {
-        exclude: /node_modules/,
+        include: [srcPath],
         loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-        },
         test: /\.js$/,
       },
     ],
@@ -25,6 +18,5 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
   target: 'web',
 };
