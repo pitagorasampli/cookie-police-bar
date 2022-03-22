@@ -32,6 +32,8 @@ To customize the bar:
    />
 ```
 
+See the sample: https://github.com/pitagorasampli/cookie-police-bar/blob/main/public/index.html
+
 ## Development
 
 Run `npm start`.
