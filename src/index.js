@@ -75,6 +75,7 @@ function createAcceptButton(attributes = {}, events = {}) {
         backgroundColor: attributes.btnbgcolor,
         borderColor: attributes.btnbgcolor,
         color: attributes.btntextcolor,
+        borderRadius: attributes.btnborderradius,
       },
       events: {
         click: (e) => {
