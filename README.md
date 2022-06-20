@@ -26,6 +26,7 @@ To customize the bar:
    linktext="Portal"
    link="https://ampli.com.br"
    btnbgcolor="blue"
+   btnborderradius='8px'
    btntextcolor="gray"
    btntext="Concordo"
    closecolor="red"
