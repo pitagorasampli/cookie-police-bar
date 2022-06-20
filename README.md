@@ -5,7 +5,7 @@
 Insert the script into the HTML document:
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pitagorasampli/cookie-police-bar@v1.0.0/dist/index.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pitagorasampli/cookie-police-bar@v1.1.0/dist/index.js"></script>
 ```
 
 Then insert the `cookie-police-bar` component into the body element:
