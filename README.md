@@ -11,7 +11,7 @@ Insert the script into the HTML document:
 Then insert the `cookie-police-bar` component into the body element:
 
 ```html
-<cookie-police-bar />
+<cookie-police-bar></cookie-police-bar>
 ```
 
 To customize the bar:
@@ -29,7 +29,7 @@ To customize the bar:
    btntextcolor="gray"
    btntext="Concordo"
    closecolor="red"
-   />
+   ></cookie-police-bar>
 ```
 
 See the sample: https://github.com/pitagorasampli/cookie-police-bar/blob/main/public/index.html
